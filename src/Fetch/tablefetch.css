@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px);
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: rotateY(5deg); /* 3D effect on hover */
+}
+
+thead {
+    background: linear-gradient(to right, #FF6A88, #FF9A8B);
+    color: white;
+    position: relative;
+}
+
+thead:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #FF6A88;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+thead:hover:after {
+    transform: scaleX(1); /* Underline effect on hover */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+tbody tr {
+    transition: background-color 0.4s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+tbody tr:hover {
+    background: linear-gradient(to right, #FFECD2, #FFD4A3); /* Gradient on hover */
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+td {
+    color: #333;
+    position: relative;
+    text-align: left; /* Ensure text alignment */
+}
+
+td:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+td:hover:before {
+    transform: scaleX(1); /* Underline effect on cell hover */
+}
